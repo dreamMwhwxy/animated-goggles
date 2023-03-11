@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../day2/js/template.js"></script>
+</head>
+
+<body>
+    <div id="uesr-box"></div>
+
+    <script type="text\html" id="tp1-name">
+        <div>名字：{{name}}</div>
+        <div>性别：{{ gender}}</div>
+        <div>年龄：{{  age}}</div>
+        <div>地址：{{ address}}</div>
+     </script>
+
+    <script>
+        //<!--定义数据-->
+        var data = { name: '李四', gender: '男', age: 29, address: '河南郑州' };
+        // 调用模板
+        var hemls = template("tp1-name",data);
+        //渲染页面
+        document.getElementById('uesr-box').innerHTML = hemls;
+
+    </script>
+</body>
+
+</html>

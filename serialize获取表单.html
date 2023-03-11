@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../day1/lib/jquery.js"></script>
+</head>
+
+<body>
+    <form action="./long" id="form1">
+        <input type="text" name="userName">
+        <input type="password" name="userPassword">
+        <button type="submit">提交</button>
+    </form>
+    <script>
+        $(function () {
+            $("#form1").submit(function (e) {
+                e.preventDefault();
+                console.log($("#form1").serialize())
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>

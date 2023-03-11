@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = '<div>{{namedwaw}}今年{{ age }}岁了！</div>';
+        var patton = /{{\s*([a-zA-Z]+)\s*}}/;
+        // // 第一个匹配
+        // var res1 = patton.exec(str);
+        // str = str.replace(res1[0],res1[1]);
+        // console.log(res1);
+        // console.log(str);
+        // // 第二吃匹配
+        // var res2 = patton.exec(str);
+        // str = str.replace(res2[0],res2[1]);
+        // console.log(str);
+        
+        // while 循环
+        var patternResual = null;
+        while(patternResual = patton.exec(str)){
+            str = str.replace(patternResual[0],patternResual[1]);
+        }
+        console.log(str);
+    </script>
+</body>
+
+</html>
